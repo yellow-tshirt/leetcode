@@ -1,1 +1,5 @@
 /target
+/Cargo.lock
+/.idea/CodingArrays.iml
+/.idea/modules.xml
+/.idea/vcs.xml
