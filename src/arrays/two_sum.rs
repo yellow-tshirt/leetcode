@@ -1,3 +1,7 @@
+#![allow(dead_code)]
+
+// Your code goes here
+
 pub mod brute {
     //first attempt
     pub fn find_two_sum_brute(a: Vec<i32>, target: i32) -> Option<[usize; 2]> {
@@ -9,7 +13,7 @@ pub mod brute {
             }
         }
 
-        return None;
+         None
     }
     //leetcode adjusted
     pub fn two_sum_leet(a: Vec<i32>, target: i32) -> Vec<i32>{
@@ -21,7 +25,7 @@ pub mod brute {
             }
         }
 
-        return vec![0,0];
+        vec![0,0]
     }
 
 }
@@ -31,8 +35,8 @@ pub mod optimized {
 
     pub fn find_two_sum_optimized(a: Vec<i32>, target: i32) -> Vec<i32>{
         let mut hm = HashMap::new();
-        for i in 0..a.len() {
-            match hm.get(&a[i]) {
+        for (i, current_number) in a.iter().enumerate(){
+            match hm.get(current_number) {
                 Some(&number) => return vec![number, i as i32],
                 _ => {
                     hm.insert(target-a[i],i as i32);
