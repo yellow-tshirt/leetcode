@@ -1,8 +1,10 @@
+use crate::arrays::trapping_rainwater::unoptimized::trapping_rainwater;
+
 mod arrays;
-use crate::arrays::biggest_water_container::container_with_most_water;
 
 fn main() {
-    let a = vec![7,1,2,100,99,9];
-    let solution = container_with_most_water(&a) ;
+    let arr = [1,3,1,4];
+    let arr2= [0,1,0,2,1,0,3,1,0,1,2];
+    let solution = trapping_rainwater(&arr);
     println!("{}", solution);
 }

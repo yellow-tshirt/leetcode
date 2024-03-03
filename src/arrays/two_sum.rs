@@ -1,7 +1,5 @@
 #![allow(dead_code)]
 
-// Your code goes here
-
 pub mod brute {
     //first attempt
     pub fn find_two_sum_brute(a: Vec<i32>, target: i32) -> Option<[usize; 2]> {
